@@ -1,4 +1,4 @@
-package vn.edu.ifi;
+package vn.edu.ifi.gestionstock;
 
 import java.text.DateFormat;
 import java.util.Date;
