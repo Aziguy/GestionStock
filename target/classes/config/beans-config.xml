@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="articleDao" class="vn.edu.ifi.gestionstock.dao.impl.ArticleDaoImpl" />
+	<bean id="articleService"
+		class="vn.edu.ifi.gestionstock.services.impl.ArticleServiceImpl">
+		<property name="dao" ref="articleDao"></property>
+	</bean>
+	<bean id="categorieDao" class="vn.edu.ifi.gestionstock.dao.impl.CategorieDaoImpl" />
+	<bean id="categorieService"
+		class="vn.edu.ifi.gestionstock.services.impl.CategorieServiceImpl">
+		<property name="dao" ref="categorieDao"></property>
+	</bean>
+	<bean id="clientDao" class="vn.edu.ifi.gestionstock.dao.impl.ClientDaoImpl" />
+	<bean id="clientService" class="vn.edu.ifi.gestionstock.services.impl.ClientServiceImpl">
+		<property name="dao" ref="clientDao"></property>
+	</bean>
+	<bean id="cmdCltDao" class="vn.edu.ifi.gestionstock.dao.impl.CommandeClientDaoImpl" />
+	<bean id="cmdCltService"
+		class="vn.edu.ifi.gestionstock.services.impl.CommandeClientServiceImpl">
+		<property name="dao" ref="cmdCltDao"></property>
+	</bean>
+	<bean id="cmdFrsDao"
+		class="vn.edu.ifi.gestionstock.dao.impl.CommandeFournisseurDaoImpl" />
+	<bean id="cmdFrsService"
+		class="vn.edu.ifi.gestionstock.services.impl.CommandeFournisseurServiceImpl">
+		<property name="dao" ref="cmdFrsDao"></property>
+	</bean>
+	<bean id="fournisseurDao" class="vn.edu.ifi.gestionstock.dao.impl.FournisseurDaoImpl" />
+	<bean id="fournisseurService"
+		class="vn.edu.ifi.gestionstock.services.impl.FournisseurServiceImpl">
+		<property name="dao" ref="fournisseurDao"></property>
+	</bean>
+	<bean id="ligneCmdCltDao"
+		class="vn.edu.ifi.gestionstock.dao.impl.LigneCommandeClientDaoImpl" />
+	<bean id="ligneCmdCltService"
+		class="vn.edu.ifi.gestionstock.services.impl.LigneCommandeClientServiceImpl">
+		<property name="dao" ref="ligneCmdCltDao"></property>
+	</bean>
+	<bean id="ligneCmdFrsDao"
+		class="vn.edu.ifi.gestionstock.dao.impl.LigneCommandeFournisseurDaoImpl" />
+	<bean id="ligneCmdFrsService"
+		class="vn.edu.ifi.gestionstock.services.impl.LigneCommandeFournisseurServiceImpl">
+		<property name="dao" ref="ligneCmdFrsDao"></property>
+	</bean>
+	<bean id="ligneVenteDao" class="vn.edu.ifi.gestionstock.dao.impl.LigneVenteDaoImpl" />
+	<bean id="ligneVenteService"
+		class="vn.edu.ifi.gestionstock.services.impl.LigneVenteServiceImpl">
+		<property name="dao" ref="ligneVenteDao"></property>
+	</bean>
+	<bean id="mvtStkDao" class="vn.edu.ifi.gestionstock.dao.impl.MvtStkDaoImpl" />
+	<bean id="mvtStkService" class="vn.edu.ifi.gestionstock.services.impl.MvtStkServiceImpl">
+		<property name="dao" ref="mvtStkDao"></property>
+	</bean>
+	<bean id="utilisateurDao" class="vn.edu.ifi.gestionstock.dao.impl.UtilisateurDaoImpl" />
+	<bean id="utilisateurService"
+		class="vn.edu.ifi.gestionstock.services.impl.UtilisateurServiceImpl">
+		<property name="dao" ref="utilisateurDao"></property>
+	</bean>
+	<bean id="venteDao" class="vn.edu.ifi.gestionstock.dao.impl.VenteDaoImpl" />
+	<bean id="venteService" class="vn.edu.ifi.gestionstock.services.impl.VenteServiceImpl">
+		<property name="dao" ref="venteDao"></property>
+	</bean>
+
+	<bean id="flickrDao" class="vn.edu.ifi.gestionstock.dao.impl.FlickrDaoImpl" />
+	<bean id="flickrService" class="vn.edu.ifi.gestionstock.services.impl.FlickrServiceImpl">
+		<property name="dao" ref="flickrDao"></property>
+	</bean>
+</beans>
